@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav {
+            background-color: #f2f2f2;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .paragraph {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 8px;
+            flex-wrap: wrap;
+        }
+
+        .paragraph img {
+            max-width: 100%; /* Adjusted to make sure the image stays within its container */
+            border-radius: 8px;
+            margin: auto; /* Centering the image */
+            display: block; /* Ensuring proper centering */
+            text-align: center;
+        }
+
+        .paragraph p {
+            flex: 1;
+            max-width: 100%;
+            text-align: center;
+        }
+
+        .paragraph h2 {
+            flex: 1;
+            max-width: 100%;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .paragraph:nth-child(odd) {
+            background-color: #ffd699; /* Light Orange */
+        }
+
+        .paragraph:nth-child(even) {
+            background-color: #99c2ff; /* Light Blue */
+        }
+
+        .third-paragraph {
+            flex-direction: column;
+        }
+
+        .third-paragraph img {
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Your Website Title</h1>
+    </header>
+
+    <nav>
+        <a href="#section1">Section 1</a>
+        <a href="#section2">Section 2</a>
+        <a href="#section3">Section 3</a>
+        <a href="#section4">Section 4</a>
+    </nav>
+
+    <div class="container">
+        <div class="paragraph" id="section1">
+            <img src="your_image_url_1.jpg" alt="Image 1">
+            <div>
+                <h2>Title 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
+
+        <div class="paragraph" id="section2">
+            <div>
+                <h2>Title 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <img src="your_image_url_2.jpg" alt="Image 2">
+        </div>
+
+        <div class="paragraph third-paragraph" id="section3">
+            <img src="your_image_url_3.jpg" alt="Image 3">
+            <div>
+                <h2>Title 3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
+
+        <div class="paragraph" id="section4">
+            <div>
+                <h2>Title 4</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <img src="your_image_url_4.jpg" alt="Image 4">
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling to section
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
