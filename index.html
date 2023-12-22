@@ -1,0 +1,412 @@
+in
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        
+        nav {
+            background-color: #f2f2f2;
+            padding: 1em;
+            text-align: center;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 10px;
+            cursor: pointer;
+            font-family: 'Georgia', sans-serif;
+            font-size: 24px;
+        }
+        
+        .container {
+            margin: 0;
+            padding: 00px;
+        }
+        
+        .paragraph {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 00px;
+            padding: 0px;
+            border-radius: 0px;
+            flex-wrap: wrap;
+        }
+        
+        .paragraph img {
+            max-width: 100px;
+            /* Adjusted to make sure the image stays within its container */
+            border-radius: 0px;
+            margin: left;
+            /* Centering the image */
+            margin-left: 10px;
+            margin-right: 10px;
+            display: block;
+            /* Ensuring proper centering */
+            text-align: end;
+        }
+        
+        .paragraph p, .paragraph a {
+            flex: 1;
+            /* width: 600px; */
+            max-width: 500px;
+            margin-left: 50px;
+            margin-right: 100px;
+            text-align: center;
+        }
+        
+        .paragraph h2 {
+            flex: 1;
+            max-width: 100%;
+            margin-bottom: 0px;
+            text-align: center;
+        }
+        
+        .paragraph:nth-child(odd) {
+            background-color: #064704;
+            /* Light Orange */
+        }
+        
+        .paragraph:nth-child(even) {
+            background-color: #99c2ff;
+            /* Light Blue */
+        }
+        
+        .first-paragraph {
+            flex-direction: column;
+        }
+        
+        .first-paragraph img {
+            max-height: 200px;
+            margin-bottom: 10px;
+        }
+        
+        .title-paragraph {
+            flex-direction: column;
+        }
+        
+        .title-paragraph img {
+            max-width: 100%;
+            margin-left: 0px;
+            margin-right: 0px;
+            height: auto;
+            margin-bottom: 0px;
+        }
+        
+        .title {
+            font-size: 20px;
+            max-width: 100%;
+            margin-left: 0px;
+            margin-right: 0px;
+            height: auto;
+            margin-bottom: 0px;
+        }
+        
+        .slub {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 00px;
+            padding: 0px;
+            border-radius: 0px;
+            flex-wrap: wrap;
+        }
+        
+        .slub a {
+            margin-left: 40%;
+            text-align: center;
+        }
+        
+        .slub img {
+            justify-content: center;
+            align-items: center;
+            max-width: 30%;
+            margin-left: 0px;
+            margin-right: 0px;
+            height: auto;
+            margin-bottom: 0px;
+        }
+        
+        .slub div div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 0px;
+            border-radius: 0px;
+        }
+        
+        .slub div p {
+            flex: 1;
+            /* width: 600px; */
+            max-width: 200px;
+            margin-left: 20px;
+            margin-right: 20px;
+            text-align: right;
+        }
+        
+        .slub div h2 {
+            flex: 1;
+            /* width: 600px; */
+            max-width: 100%;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .slub div img {
+            max-width: 100px;
+            margin-left: 10px;
+            height: auto;
+            margin-bottom: 0px;
+            display: block;
+            text-align: justify;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .nocleg {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 00px;
+            padding: 0px;
+            border-radius: 0px;
+            flex-wrap: wrap;
+        }
+        
+        .nocleg div div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 0px;
+            border-radius: 0px;
+        }
+        
+        .nocleg div p {
+            flex: 1;
+            /* width: 600px; */
+            max-width: 200px;
+            margin-left: 0px;
+            margin-right: 20px;
+            text-align: center;
+        }
+        
+        .nocleg div h2 {
+            flex: 1;
+            /* width: 600px; */
+            max-width: 100%;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .nocleg img {
+            margin-left: 0px;
+            display: block;
+            text-align: justify;
+            max-width: 30%;
+            height: auto;
+        }
+        
+        .nocleg div img {
+            display: block;
+            text-align: justify;
+            width: auto;
+            max-width: 200px;
+            height: auto;
+        }
+        
+        .fotos img {
+            margin-left: 0px;
+            margin-right: 0px;
+            max-width: 33.3vw;
+            /* Set the width to 25% of the viewport width */
+            max-width: 33.3%;
+            /* Ensure the image doesn't exceed its natural size */
+            height: auto;
+        }
+        
+        .fotos img {
+            margin-left: 0px;
+            margin-right: 0px;
+            max-width: 33.3vw;
+            /* Set the width to 25% of the viewport width */
+            max-width: 33.3%;
+            /* Ensure the image doesn't exceed its natural size */
+            height: auto;
+        }
+        .zdjecia p, .zdjecia a{ 
+            flex: 1;
+            /* width: 600px; */
+            max-width: 200px;
+            margin-left: 50px;
+            margin-right: 50px;
+            text-align: center;
+        }
+        .zdjecia img{ 
+            margin-left: 0px;
+            margin-right: 0px;
+            max-width: 33.3vw;
+            /* Set the width to 25% of the viewport width */
+            max-width: 33.3%;
+            /* Ensure the image doesn't exceed its natural size */
+            height: auto;
+        }
+
+        .kontakty {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 35%;
+        }
+
+        .kontakty h2{
+            text-align: center;
+        }
+
+        .kontakty table {
+            width: 25%;
+            margin-bottom: 10px;
+        }
+
+        .kontakty th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        @media (max-width: 450px) {
+            .slub {
+                flex-direction: row;
+            }
+            .slub div,
+            .slub img {
+                flex: 2;
+            }
+            .slub img {
+                margin-left: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#sec1">Ślub & Wesele</a>
+        <a href="#sec2">Noclegi</a>
+        <a href="#sec3">Prezenty</a>
+        <a href="#sec4">Zdjęcia</a>
+        <a href="#sec5">Kontakty</a>
+    </nav>
+    <header class="title">
+        <h1>Czas na Ślub albo coś takiego</h1>
+    </header>
+    <div class="paragraph title-paragraph">
+        <img src="temp_lanscape_pic.jpg" alt="poziome_zdjecie">
+    </div>
+
+    <div class="container">
+        <div class="paragraph slub" id="sec1">
+            <div>
+                <h2>Ślub & Wesele</h2>
+                <div>
+                    <img src="5d7f5f41-eb45-4f6a-a3fb-a92e871981a3.jpg" alt="mapa do kalinowki">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <a>link do kalinowki</a>
+            </div>
+            <img src="5d7f5f41-eb45-4f6a-a3fb-a92e871981a3.jpg" alt="zdjęcie kalinówki">
+        </div>
+
+        <div class="paragraph nocleg" id="sec2">
+            <img src="5d7f5f41-eb45-4f6a-a3fb-a92e871981a3.jpg" alt="zdjęcie villi">
+            <div>
+                <h2>Noclegi</h2>
+                <div>
+                    <p>zapewniony jest nocleg i sniadanie blablabla</p>
+                    <img src="5d7f5f41-eb45-4f6a-a3fb-a92e871981a3.jpg" alt="mapa na nocleg">
+                </div>
+                <a>link do willi</a>
+            </div>
+        </div>
+
+        <div class="paragraph first-paragraph" id="sec3">
+            <div>
+                <h2>Prezenty</h2>
+            </div>
+            <img src="5d7f5f41-eb45-4f6a-a3fb-a92e871981a3.jpg" alt="piktogramy">
+        </div>
+
+        <div class="paragraph fotos" ">
+            <img src="5d7f5f41-eb45-4f6a-a3fb-a92e871981a3.jpg" alt="Image 3">
+            <img src="5d7f5f41-eb45-4f6a-a3fb-a92e871981a3.jpg" alt="Image 3">
+            <img src="5d7f5f41-eb45-4f6a-a3fb-a92e871981a3.jpg" alt="Image 3">
+
+        </div>
+
+        <div class="paragraph zdjecia" id="sec4">
+            <div>
+                <h2>Zdjęcia</h2>
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a>link do strony googledrive</a>
+                </div>
+
+            </div>
+            <img src="5d7f5f41-eb45-4f6a-a3fb-a92e871981a3.jpg" alt="logo google drive">
+        </div>
+
+        <div class="paragraph kontakty" id="sec5">
+            <h2>kontakty</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Świadek</td>
+                        <td>(555) 123-4567</td>
+                    </tr>
+                    <tr>
+                        <td>Światkowa</td>
+                        <td>(555) 987-6543</td>
+                    </tr>
+                    <tr>
+                        <td>Villa</td>
+                        <td>(555) 987-6543</td> 
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    <script>
+        // Smooth scrolling to section
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
