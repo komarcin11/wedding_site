@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paragraphs Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .container {
+            display: grid;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .column {
+            width: 48%; /* Adjust the width as needed */
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>This is the first paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div>
+        <p>This is the second paragraph. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div>
+        <p>This is the third paragraph. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div>
+        <p>This is the fourth paragraph. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    </div>
+    <div class="container">
+        <div class="column">
+            <p>This is the fifth paragraph. Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="column">
+            <p>This is the sixth paragraph. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+    </div>
+</body>
+</html>

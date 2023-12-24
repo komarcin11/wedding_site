@@ -1,4 +1,3 @@
-in
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,10 +5,14 @@ in
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
     <title>Your Website Title</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Baskerville';
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -19,22 +22,34 @@ in
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 1em;
+            align-items: center;
+            justify-items: center;
+            padding: 6px;
         }
-        
+
+        .title {
+            font-family: 'Dancing Script', sans-serif;
+            font-size: auto;
+            width:100%;
+            max-width: 100%;
+            font-weight: bolder;
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+        }
         nav {
             background-color: #f2f2f2;
-            padding: 1em;
+            padding: 1em;   
             text-align: center;
         }
         
         nav a {
-            text-decoration: none;
+            text-decoration: underline;
             color: #333;
             margin: 0 10px;
             cursor: pointer;
-            font-family: 'Georgia', sans-serif;
-            font-size: 24px;
+            font-family: 'Baskerville';
+            font-size: 20px;
         }
         
         .container {
@@ -43,6 +58,7 @@ in
         }
         
         .paragraph {
+            font-family: 'Baskerville';
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -100,29 +116,22 @@ in
             margin-bottom: 10px;
         }
         
-        .title-paragraph {
-            flex-direction: column;
-        }
+
         
         .title-paragraph img {
-            max-width: 100%;
             margin-left: 0px;
             margin-right: 0px;
+            max-width: 33.3vw;
+            /* Set the width to 25% of the viewport width */
+            max-width: 33.3%;
+            /* Ensure the image doesn't exceed its natural size */
             height: auto;
-            margin-bottom: 0px;
         }
         
-        .title {
-            font-size: 20px;
-            max-width: 100%;
-            margin-left: 0px;
-            margin-right: 0px;
-            height: auto;
-            margin-bottom: 0px;
-        }
-        
+
         .slub {
             display: flex;
+            font-family: 'Baskerville', sans-serif;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 00px;
@@ -132,8 +141,10 @@ in
         }
         
         .slub a {
-            margin-left: 40%;
+            margin-left: 0px;
+            margin-right: 0px;
             text-align: center;
+            margin-bottom: 5px;
         }
         
         .slub img {
@@ -145,25 +156,51 @@ in
             height: auto;
             margin-bottom: 0px;
         }
+
+        .slub iframe {
+            justify-content: center;
+            align-items: center;
+            max-width:100%;
+            width: auto;
+            margin-left: 0px;
+            margin-right: 0px;
+            max-height: 100%;
+            height: auto;
+            margin-bottom: 0px;
+        }
         
         .slub div div {
             display: flex;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             padding: 0px;
             border-radius: 0px;
         }
         
+        
         .slub div p {
+            font-family: 'Baskerville';
             flex: 1;
             /* width: 600px; */
-            max-width: 200px;
+            max-width: 300px;
             margin-left: 20px;
             margin-right: 20px;
             text-align: right;
+
+        }
+
+        .slub div {
+            margin-left: auto;
+            margin-right: auto;
         }
         
+        
         .slub div h2 {
+            font-family: 'Allura';
+            font-size: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             flex: 1;
             /* width: 600px; */
             max-width: 100%;
@@ -171,16 +208,6 @@ in
             text-align: center;
         }
         
-        .slub div img {
-            max-width: 100px;
-            margin-left: 10px;
-            height: auto;
-            margin-bottom: 0px;
-            display: block;
-            text-align: justify;
-            justify-content: center;
-            align-items: center;
-        }
         
         .nocleg {
             display: flex;
@@ -233,15 +260,6 @@ in
             height: auto;
         }
         
-        .fotos img {
-            margin-left: 0px;
-            margin-right: 0px;
-            max-width: 33.3vw;
-            /* Set the width to 25% of the viewport width */
-            max-width: 33.3%;
-            /* Ensure the image doesn't exceed its natural size */
-            height: auto;
-        }
         
         .fotos img {
             margin-left: 0px;
@@ -251,6 +269,10 @@ in
             max-width: 33.3%;
             /* Ensure the image doesn't exceed its natural size */
             height: auto;
+        }
+        .zdjecia div{
+            margin-left: auto;
+            margin-right: auto;
         }
         .zdjecia p, .zdjecia a{ 
             flex: 1;
@@ -271,7 +293,7 @@ in
         }
 
         .kontakty {
-            font-family: Arial, sans-serif;
+            font-family: 'Baskerville', sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
@@ -295,7 +317,7 @@ in
             text-align: center;
         }
 
-        @media (max-width: 450px) {
+        @media (max-width: 800px) {
             .slub {
                 flex-direction: row;
             }
@@ -303,9 +325,36 @@ in
             .slub img {
                 flex: 2;
             }
-            .slub img {
-                margin-left: 50px;
+            .slub p{
+                min-width: 200px;
             }
+            .slub img {
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 150px;
+                max-width: 100%;
+                margin-left: 0px;
+                margin-right: 0px;
+                height: auto;
+                margin-bottom: 5px;
+            }
+            .slub iframe {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 150px;
+            max-width:100%;
+            width: auto;
+            margin-left: 0px;
+            margin-right: 0px;
+            max-height: 100%;
+            min-height: 150px;
+            min-width: 150px;
+            height: auto;
+            margin-bottom:0px;
+        }
         }
     </style>
 </head>
@@ -318,12 +367,17 @@ in
         <a href="#sec4">Zdjęcia</a>
         <a href="#sec5">Kontakty</a>
     </nav>
+
     <header class="title">
-        <h1>Czas na Ślub albo coś takiego</h1>
+        <h1>Patrycja & Marcin</h1>
     </header>
+
     <div class="paragraph title-paragraph">
-        <img src="temp_lanscape_pic.jpg" alt="poziome_zdjecie">
+        <img src="fotos/jaskinia_sq.jpg" alt="zdj_jaskinia">
+        <img src="fotos/wesele_mlodego_sq.jpg" alt="zdj_wesele_mlodego">
+        <img src="fotos/sycylia_sq.jpg" alt="zdj_sycylia">
     </div>
+
 
     <div class="container">
         <div class="paragraph slub" id="sec1">
@@ -332,23 +386,21 @@ in
                 <div>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7201.050467301942!2d18.553038025033867!3d54.36476464950152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd74559d38d345%3A0x75be50d1c2592cd3!2sRestauracja%20Kalin%C3%B3wka!5e0!3m2!1spl!2spl!4v1703341889708!5m2!1spl!2spl" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>Ceremonia ślubna odbędzie sie o godzinie 16:00 w  na w ośrodku <a href="http://kalinowka.com.pl/" >kalinówka</a>. Poceremoni zaczniemy obrzędy weselne ....</p>
                 </div>
-                <a>link do kalinowki</a>
+
             </div>
-            <img src="5d7f5f41-eb45-4f6a-a3fb-a92e871981a3.jpg" alt="zdjęcie kalinówki">
+            <img src="fotos/kalinówka_sq.jpg" alt="zdjęcie kalinówki">
         </div>
 
-        <div class="paragraph nocleg" id="sec2">
-            <img src="5d7f5f41-eb45-4f6a-a3fb-a92e871981a3.jpg" alt="zdjęcie villi">
+        <div class="paragraph slub" id="sec2">
+            <img src="fotos/villa_sq.jpg" alt="zdjęcie villi">
             <div>
                 <h2>Noclegi</h2>
                 <div>
-                    <p>zapewniony jest nocleg i sniadanie blablabla</p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2324.561564618028!2d18.55773547659008!3d54.364728172602135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd7455125efc13%3A0x6e2698d572ee6c02!2sVilla%20Gda%C5%84sk!5e0!3m2!1spl!2spl!4v1703342223593!5m2!1spl!2spl" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+                    <p>zapewniony jest nocleg w pobliskiej<a href="http://villagdansk.pl/index.php" >Villi Gdańsk</a> sniadanie blablabla</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2324.561564618028!2d18.55773547659008!3d54.364728172602135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd7455125efc13%3A0x6e2698d572ee6c02!2sVilla%20Gda%C5%84sk!5e0!3m2!1spl!2spl!4v1703342223593!5m2!1spl!2spl" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <a>link do willi</a>
             </div>
         </div>
 
@@ -359,10 +411,10 @@ in
             <img src="5d7f5f41-eb45-4f6a-a3fb-a92e871981a3.jpg" alt="piktogramy">
         </div>
 
-        <div class="paragraph fotos" ">
-            <img src="5d7f5f41-eb45-4f6a-a3fb-a92e871981a3.jpg" alt="Image 3">
-            <img src="5d7f5f41-eb45-4f6a-a3fb-a92e871981a3.jpg" alt="Image 3">
-            <img src="5d7f5f41-eb45-4f6a-a3fb-a92e871981a3.jpg" alt="Image 3">
+        <div class="paragraph fotos">
+            <img src="fotos/jastarnia_sq.jpg" alt="jastarnia_sq">
+            <img src="fotos/jaskinia_pierscien_sq.jpg" alt="jaskinia_pierscien_sq">
+            <img src="fotos/karpacz_sq.jpg" alt="karpacz_sq">
 
         </div>
 
