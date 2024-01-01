@@ -112,18 +112,28 @@
         }
         
         .first-paragraph img {
-            max-height: 200px;
-            margin-bottom: 10px;
+            margin-left: 0px;
+            margin-right: 0px;
+            max-width: 50%;
+            /* Ensure the image doesn't exceed its natural size */
+            height: auto;
+            
         }
-        
-
+        .first-paragraph h2 {
+            font-family: 'Allura';
+            font-size: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+        }
         
         .title-paragraph img {
             margin-left: 0px;
             margin-right: 0px;
-            max-width: 33.3vw;
+            max-width: 33.33vw;
             /* Set the width to 25% of the viewport width */
-            max-width: 33.3%;
+            max-width: 33.33%;
             /* Ensure the image doesn't exceed its natural size */
             height: auto;
         }
@@ -162,8 +172,8 @@
             align-items: center;
             max-width:100%;
             width: auto;
-            margin-left: 0px;
-            margin-right: 0px;
+            margin-left: 5px;
+            margin-right: 5px;
             max-height: 100%;
             height: auto;
             margin-bottom: 0px;
@@ -182,10 +192,10 @@
             font-family: 'Baskerville';
             flex: 1;
             /* width: 600px; */
-            max-width: 300px;
-            margin-left: 20px;
-            margin-right: 20px;
-            text-align: right;
+            max-width: 350px;
+            margin-left: 5px;
+            margin-right: 5px;
+            text-align: center;
 
         }
 
@@ -193,7 +203,7 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         
         .slub div h2 {
             font-family: 'Allura';
@@ -259,35 +269,56 @@
             max-width: 200px;
             height: auto;
         }
-        
-        
+                
         .fotos img {
             margin-left: 0px;
             margin-right: 0px;
-            max-width: 33.3vw;
+            max-width: 33.33vw;
             /* Set the width to 25% of the viewport width */
-            max-width: 33.3%;
+            max-width: 33.33%;
             /* Ensure the image doesn't exceed its natural size */
             height: auto;
         }
+
         .zdjecia div{
+            font-family: 'Baskerville';
             margin-left: auto;
             margin-right: auto;
         }
-        .zdjecia p, .zdjecia a{ 
+
+        .zdjecia p{   
+            font-family: 'Baskerville';
             flex: 1;
             /* width: 600px; */
-            max-width: 200px;
-            margin-left: 50px;
-            margin-right: 50px;
+            max-width: 400px;
+            margin-left: 20px;
+            margin-right: 20px;
             text-align: center;
+            align-items: center;
+            justify-items: center;
         }
-        .zdjecia img{ 
-            margin-left: 0px;
-            margin-right: 0px;
-            max-width: 33.3vw;
+        .zdjecia div p a{   
+            font-family: 'Baskerville';
+            margin-left: 00px;
+            margin-right: 00px;
+        }
+
+        .zdjecia h2{
+            font-family: 'Allura';
+            font-size:35px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .zdjecia a{
+            margin: 0px;
+        }
+
+        .zdjecia a img{ 
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 50vw;
             /* Set the width to 25% of the viewport width */
-            max-width: 33.3%;
+            max-width: 50%;
             /* Ensure the image doesn't exceed its natural size */
             height: auto;
         }
@@ -304,32 +335,41 @@
         }
 
         .kontakty h2{
+            font-family: 'Allura';
+            font-size:35px;
             text-align: center;
+            margin-bottom: 20px;
         }
 
         .kontakty table {
-            width: 25%;
+            width: 100%;
             margin-bottom: 10px;
+            margin-left: auto;
+            margin-right:auto;
+            max-width: 400px;
         }
 
-        .kontakty th, td {
-            padding: 10px;
+        .kontakty tr, td {
+            padding: 5px;
             text-align: center;
+
         }
 
-        @media (max-width: 800px) {
+        @media (max-width: 980px) {
             .slub {
                 flex-direction: row;
             }
             .slub div,
             .slub img {
                 flex: 2;
+                justify-content: center;
+                align-items: center;
+
             }
             .slub p{
                 min-width: 200px;
             }
             .slub img {
-
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -356,6 +396,22 @@
             margin-bottom:0px;
         }
         }
+        @media (max-width: 650px) {
+            .slub div{
+                flex-direction: column;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        @media (max-width: 700px) {
+            .zdjecia{
+                flex-direction: column;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
     </style>
 </head>
 
@@ -377,16 +433,16 @@
         <img src="fotos/wesele_mlodego_sq.jpg" alt="zdj_wesele_mlodego">
         <img src="fotos/sycylia_sq.jpg" alt="zdj_sycylia">
     </div>
-
+    
 
     <div class="container">
         <div class="paragraph slub" id="sec1">
             <div>
                 <h2>Ślub & Wesele</h2>
                 <div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7201.050467301942!2d18.553038025033867!3d54.36476464950152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd74559d38d345%3A0x75be50d1c2592cd3!2sRestauracja%20Kalin%C3%B3wka!5e0!3m2!1spl!2spl!4v1703341889708!5m2!1spl!2spl" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7201.050467301942!2d18.553038025033867!3d54.36476464950152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd74559d38d345%3A0x75be50d1c2592cd3!2sRestauracja%20Kalin%C3%B3wka!5e0!3m2!1spl!2spl!4v1703341889708!5m2!1spl!2spl" max-width="450px" max-height="450px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
-                    <p>Ceremonia ślubna odbędzie sie o godzinie 16:00 w  na w ośrodku <a href="http://kalinowka.com.pl/" >kalinówka</a>. Poceremoni zaczniemy obrzędy weselne ....</p>
+                    <p>Na ceremonię zaślubin jak i wesele, zapraszamy szanownych gości do Domu Weselnego <a href="http://kalinowka.com.pl/" > "Kalinówka"</a>w Gdańsku, w dniu <b>13.09.2024 (piątke)</b> o godzinie <b>16:00</b>. To wyjątkowe miejsce położone w centrum Gdańska a mimo to dalekie od miejskiego hałasu i zgiełku.Najbliższe przystanki komunikacji miejskiej to zarówno stacja PKM Gdańsk Brętowo, jak i przystanki autobusowe: Brętowo PKM i Ogrodowa. Polecamy jednak gościom przyjazd taksówką lub samochodem (na terenie Kalinówki jest dostępny parking).</p>
                 </div>
 
             </div>
@@ -398,8 +454,8 @@
             <div>
                 <h2>Noclegi</h2>
                 <div>
-                    <p>zapewniony jest nocleg w pobliskiej<a href="http://villagdansk.pl/index.php" >Villi Gdańsk</a> sniadanie blablabla</p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2324.561564618028!2d18.55773547659008!3d54.364728172602135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd7455125efc13%3A0x6e2698d572ee6c02!2sVilla%20Gda%C5%84sk!5e0!3m2!1spl!2spl!4v1703342223593!5m2!1spl!2spl" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <p>Dla gości przejezdnych zapewniamy jeden nocleg w<a href="http://villagdansk.pl/index.php" > Villi Gdańsk</a> z piątku na , oddalonej ledwo 140 metrów od sali weselnej. Każdy wynajęty pokój dysponuje balkonem, telewizją oraz bezpłatnym bezprzewodowym dostępem do Internetu. Osobom nocującym w hotelu, zaserwowane zostaną śniadania w formie bufetu szwedzkiego. Na terenie obiektu udostępnione są bezpłatne i monitorowane miejsca parkingowe. Gdybyiość miejsc parkingowych była niewsytarczająca, istnieje możliwość pozostawienia auta na parkingu domu weselnego "Kalinówka.</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2324.561564618028!2d18.55773547659008!3d54.364728172602135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd7455125efc13%3A0x6e2698d572ee6c02!2sVilla%20Gda%C5%84sk!5e0!3m2!1spl!2spl!4v1703342223593!5m2!1spl!2spl" max-width="600" max-height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -408,43 +464,37 @@
             <div>
                 <h2>Prezenty</h2>
             </div>
-            <img src="5d7f5f41-eb45-4f6a-a3fb-a92e871981a3.jpg" alt="piktogramy">
+            <img src="fotos/piktogram_2-removebg-preview.png" alt="piktogramy" style="max-height:110px">
+            <img src="fotos/piktogram_13-removebg-preview.png" alt="piktogramy" style="max-height:150px; margin-bottom:5px">
         </div>
 
         <div class="paragraph fotos">
             <img src="fotos/jastarnia_sq.jpg" alt="jastarnia_sq">
             <img src="fotos/jaskinia_pierscien_sq.jpg" alt="jaskinia_pierscien_sq">
             <img src="fotos/karpacz_sq.jpg" alt="karpacz_sq">
-
         </div>
 
         <div class="paragraph zdjecia" id="sec4">
             <div>
                 <h2>Zdjęcia</h2>
                 <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <a>link do strony googledrive</a>
+                    <p>Zapraszamy gości do podzielenia się zdjęciami, które sami zrobicie w przeciągu świętowania z nami tego cudownego dnia za pomocą swoich telefonów komórkowych. Byłaby to dla nas cudowna  pamiątka, do której chętnie byśmy wracali, zwłaszcza że nie planujemy wynajmu fotografa. Także jeśli tylko będziecie chcieli cokolwiek podesłać - nie krępujcie się! Na poniższy link <a href="https://drive.google.com/drive/folders/16NAA-6vLk3fgHvvH6iVwWnz0DsfnetIO" > Google Drive</a>. Nawet największe obciachowe ujęcia są mile widziane.</p>
                 </div>
-
             </div>
-            <img src="5d7f5f41-eb45-4f6a-a3fb-a92e871981a3.jpg" alt="logo google drive">
+            <a href="https://drive.google.com/drive/folders/16NAA-6vLk3fgHvvH6iVwWnz0DsfnetIO" ><img src="fotos/logo_google_drive.png" alt="logo google drive"></a>
         </div>
 
         <div class="paragraph kontakty" id="sec5">
-            <h2>kontakty</h2>
+            <h2>Kontakty</h2>
             <table>
                 <tbody>
                     <tr>
                         <td>Świadek</td>
-                        <td>(555) 123-4567</td>
+                        <td>604-993-836</td>
                     </tr>
                     <tr>
                         <td>Światkowa</td>
-                        <td>(555) 987-6543</td>
-                    </tr>
-                    <tr>
-                        <td>Villa</td>
-                        <td>(555) 987-6543</td> 
+                        <td>514-461-595</td>
                     </tr>
                 </tbody>
             </table>
@@ -454,9 +504,8 @@
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+                    behavior: 'auto'
                 });
             });
         });
